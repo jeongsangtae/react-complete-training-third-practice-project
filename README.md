@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# React Third Practice Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 프로젝트 시작 전 어떤 내용을 연습하는지 정리
 
-## Available Scripts
+1. 배운 모든 핵심 React 기능을 연습
 
-In the project directory, you can run:
+2. 컴포넌트, 재사용 컴포넌트
 
-### `npm start`
+3. state, useState Hook
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. 이벤트 핸들링
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5. CSS 모듈로 컴포넌트 스타일링
 
-### `npm test`
+6. portal, ref
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+7. useEffect, useReducer, useContext
 
-### `npm run build`
+8. more...
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 프로젝트에 구성할 내용
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. 헤더 컴포넌트 추가
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. "장바구니" 버튼 컴포넌트 추가
 
-### `npm run eject`
+3. "식사" 컴포넌트 추가
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. 개별 식사 항목 추가 및 표시
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. 양식 추가
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+6. "장바구니" 컴포넌트 추가
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+7. React portal을 사용해 모달 추가
 
-## Learn More
+8. 카트 및 모달 state 관리
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+9. "장바구니" context 추가
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+10. context 사용
 
-### Code Splitting
+11. "장바구니" reducer 추가
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+12. Refs 및 Forward Refs 작업
 
-### Analyzing the Bundle Size
+13. "장바구니" 항목 출력
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+14. 더 복잡한 reducer 로직 작업
 
-### Making a Progressive Web App
+15. 아이템을 이동식으로 만들기
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+16. useEffect Hook 추가
