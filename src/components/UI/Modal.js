@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card";
 
 import classes from "./Modal.module.css";
 
@@ -6,7 +7,7 @@ const Modal = () => {
   return (
     <div>
       <div className={classes.backdrop} />
-      <div className={classes.modal}></div>
+      <Card className={classes.modal}></Card>
     </div>
   );
 };
