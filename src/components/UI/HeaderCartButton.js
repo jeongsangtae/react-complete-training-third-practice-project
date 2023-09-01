@@ -7,7 +7,7 @@ import classes from "./HeaderCartButton.module.css";
 const HeaderCartButton = (props) => {
   return (
     <div>
-      <button className={classes.button} type={props.type}>
+      <button className={classes.button} type="button">
         <CartIcon className={classes.icon} />
         Your Cart
         <div className={classes.badge}>0</div>
