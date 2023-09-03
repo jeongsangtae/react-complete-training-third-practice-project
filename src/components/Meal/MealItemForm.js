@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "../UI/Input";
 
 import classes from "./MealItemForm.module.css";
 
-const MealItemForm = () => {
+const MealItemForm = (props) => {
+  const [amount, setAmount] = useState("");
+
   const submitHandler = (event) => {
     event.preventDefault();
+
+    props.onAmount(amount);
   };
 
-  const amountDataHandler = (amountData) => {
-    console.log(amountData);
+  const amountChangeHandler = (event) => {
+    setAmount(event.target.value);
   };
 
   return (
     <form className={classes.form} onSubmit={submitHandler}>
-      <Input onAmount={amountDataHandler} />
+      <Input onAmountChange={amountChangeHandler} />
       <button type="submit">+Add</button>
     </form>
   );

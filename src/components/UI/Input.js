@@ -1,22 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 import classes from "./Input.module.css";
 
 const Input = (props) => {
-  const [amount, setAmount] = useState("");
-
-  const amountChangeHandler = (event) => {
-    setAmount(event.target.value);
-  };
-
-  const amountSubmit = () => {
-    props.onAmount(amount);
-  };
-
   return (
-    <div className={classes.input} onAmountData={amountSubmit}>
+    <div className={classes.input}>
       <labal>Amount</labal>
-      <input type="number" onChange={amountChangeHandler} />
+      <input type="number" onChange={props.onAmountChange} />
     </div>
   );
 };

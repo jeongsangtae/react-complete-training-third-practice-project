@@ -6,6 +6,10 @@ import classes from "./MealItem.module.css";
 import MealItemForm from "./MealItemForm";
 
 const MealItem = () => {
+  const mealAmount = (amount) => {
+    console.log(amount);
+  };
+
   return (
     <div>
       {dummyMeals.map((dummyMeal) => (
@@ -16,7 +20,7 @@ const MealItem = () => {
             <div className={classes.price}>${dummyMeal.price}</div>
           </div>
           <div>
-            <MealItemForm />
+            <MealItemForm onAmount={mealAmount} />
           </div>
         </div>
       ))}
