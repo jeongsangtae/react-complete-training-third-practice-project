@@ -4,12 +4,18 @@ import Input from "../UI/Input";
 import classes from "./MealItemForm.module.css";
 
 const MealItemForm = () => {
-  const amountHandler = () => {};
+  const submitHandler = (event) => {
+    event.preventDefault();
+  };
+
+  const amountDataHandler = (amountData) => {
+    console.log(amountData);
+  };
 
   return (
-    <form className={classes.form} onSubmit={amountHandler}>
-      <Input />
-      <button>+Add</button>
+    <form className={classes.form} onSubmit={submitHandler}>
+      <Input onAmount={amountDataHandler} />
+      <button type="submit">+Add</button>
     </form>
   );
 };
