@@ -4,6 +4,16 @@ import classes from "./Cart.module.css";
 import CartItem from "./CartItem";
 
 const Cart = (props) => {
+  // const totalPrice = props.totalMealDatas
+  //   .filter((totalMealData) => {
+  //     return totalMealData.price;
+  //   })
+  //   .reduce((a, b) => {
+  //     return a + b.price;
+  //   });
+
+  // console.log(totalPrice);
+
   return (
     <div>
       <ul className={classes["cart-items"]}>{/* <CartItem /> */}</ul>

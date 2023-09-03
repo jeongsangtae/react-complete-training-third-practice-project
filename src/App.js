@@ -29,7 +29,7 @@ function App() {
   return (
     <div>
       {cartModal && (
-        <Modal onClose={cartCloseHandler} onTotalMealData={totalMealData} />
+        <Modal onClose={cartCloseHandler} totalMealDatas={totalMealData} />
       )}
       <Header onOpen={cartOpenHandler} />
       <MealsSummary />
