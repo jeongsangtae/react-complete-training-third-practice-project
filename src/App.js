@@ -7,6 +7,7 @@ import Modal from "./components/UI/Modal";
 
 function App() {
   const [cartModal, setCartModal] = useState();
+  const [totalMealData, setTotalMealData] = useState([]);
 
   const cartOpenHandler = () => {
     setCartModal(true);
@@ -16,12 +17,19 @@ function App() {
     setCartModal(null);
   };
 
+  const totalMealAmountHandler = (mealData) => {
+    console.log(mealData);
+    setTotalMealData(mealData);
+  };
+
   return (
     <div>
-      {cartModal && <Modal onClose={cartCloseHandler} />}
+      {cartModal && (
+        <Modal onClose={cartCloseHandler} onTotalMealData={totalMealData} />
+      )}
       <Header onOpen={cartOpenHandler} />
       <MealsSummary />
-      <AvailableMeals />
+      <AvailableMeals onTotalMeals={totalMealAmountHandler} />
     </div>
   );
 }
