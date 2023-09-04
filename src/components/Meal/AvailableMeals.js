@@ -8,7 +8,7 @@ import MealItem from "./MealItem";
 
 const AvailableMeals = (props) => {
   const totalMealAmount = (mealData) => {
-    console.log(mealData);
+    // console.log(mealData);
     props.onTotalMeals(mealData);
   };
 

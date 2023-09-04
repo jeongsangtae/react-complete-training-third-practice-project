@@ -18,7 +18,7 @@ function App() {
   };
 
   const totalMealAmountHandler = (mealData) => {
-    console.log(mealData);
+    // console.log(mealData);
     setTotalMealData((prevMealData) => {
       return [...prevMealData, mealData];
     });

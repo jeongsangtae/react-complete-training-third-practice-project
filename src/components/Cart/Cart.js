@@ -6,7 +6,7 @@ import CartItem from "./CartItem";
 const Cart = (props) => {
   // const totalPrice = props.totalMealDatas
   //   .filter((totalMealData) => {
-  //     return totalMealData.price;
+  //     return totalMealData.price === ;
   //   })
   //   .reduce((a, b) => {
   //     return a + b.price;
@@ -16,7 +16,11 @@ const Cart = (props) => {
 
   return (
     <div>
-      <ul className={classes["cart-items"]}>{/* <CartItem /> */}</ul>
+      <ul className={classes["cart-items"]}>
+        {props.totalMealDatas.map((totalMealData) => {
+          return <CartItem totalMealData={totalMealData} />;
+        })}
+      </ul>
 
       <div className={classes.total}>
         <p>Total Amount</p>
