@@ -9,7 +9,7 @@ const HeaderCartButton = (props) => {
       <button className={classes.button} type="button" onClick={props.onOpen}>
         <CartIcon className={classes.icon} />
         Your Cart
-        <div className={classes.badge}>0</div>
+        <div className={classes.badge}>{props.mealAmount()}</div>
       </button>
     </div>
   );

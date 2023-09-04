@@ -18,7 +18,9 @@ const Cart = (props) => {
     <div>
       <ul className={classes["cart-items"]}>
         {props.totalMealDatas.map((totalMealData) => {
-          return <CartItem totalMealData={totalMealData} />;
+          return (
+            <CartItem totalMealData={totalMealData} key={totalMealData.id} />
+          );
         })}
       </ul>
 

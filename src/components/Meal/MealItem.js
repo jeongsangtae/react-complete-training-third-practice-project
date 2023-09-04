@@ -8,6 +8,7 @@ const MealItem = (props) => {
     const totalPrice = props.dummyMealData.price * amount;
 
     const mealData = {
+      id: props.dummyMealData.id,
       name: props.dummyMealData.name,
       price: +totalPrice,
       amount: +amount,

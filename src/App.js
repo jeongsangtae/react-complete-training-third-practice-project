@@ -24,14 +24,19 @@ function App() {
     });
   };
 
+  const totalMealAmount = () => {
+    return totalMealData.length;
+  };
+
   console.log(totalMealData);
+  console.log(totalMealAmount());
 
   return (
     <div>
       {cartModal && (
         <Modal onClose={cartCloseHandler} totalMealDatas={totalMealData} />
       )}
-      <Header onOpen={cartOpenHandler} />
+      <Header onOpen={cartOpenHandler} mealAmount={totalMealAmount} />
       <MealsSummary />
       <AvailableMeals onTotalMeals={totalMealAmountHandler} />
     </div>
