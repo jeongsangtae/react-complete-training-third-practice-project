@@ -7,7 +7,7 @@ const HeaderCartButton = (props) => {
   const [isBump, setIsBump] = useState(false);
 
   useEffect(() => {
-    if (props.mealAmount() > 0) {
+    if (props.mealAmount > 0) {
       // 식사 메뉴가 추가되면 뱃지를 bump 클래스로 추가
       setIsBump(true);
 
@@ -24,7 +24,7 @@ const HeaderCartButton = (props) => {
         <CartIcon className={classes.icon} />
         Your Cart
         <div className={`${classes.badge} ${isBump ? classes.bump : ""}`}>
-          {props.mealAmount()}
+          {props.mealAmount}
         </div>
       </button>
     </div>

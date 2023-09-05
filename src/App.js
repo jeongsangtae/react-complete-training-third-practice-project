@@ -37,12 +37,16 @@ function App() {
     });
   };
 
-  const totalMealAmount = () => {
-    return totalMealData.length;
-  };
+  // const totalMealAmount = totalMealData.map((mealData) => {
+  //   return mealData.amount;
+  // });
+
+  const totalMealAmount = totalMealData.reduce((total, mealData) => {
+    return total + mealData.amount;
+  }, 0);
 
   console.log(totalMealData);
-  console.log(totalMealAmount());
+  console.log(totalMealAmount);
 
   return (
     <div>
