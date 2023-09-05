@@ -14,6 +14,12 @@ const Cart = (props) => {
 
   // console.log(totalPrice);
 
+  const totalMealPrice = props.totalMealDatas.reduce((totalPrice, mealData) => {
+    return totalPrice + mealData.price;
+  }, 0);
+
+  console.log(totalMealPrice);
+
   return (
     <div>
       <ul className={classes["cart-items"]}>
@@ -26,7 +32,7 @@ const Cart = (props) => {
 
       <div className={classes.total}>
         <p>Total Amount</p>
-        <p>$88.99</p>
+        <p>${totalMealPrice}</p>
       </div>
 
       <div className={classes.actions}>

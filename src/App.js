@@ -41,8 +41,8 @@ function App() {
   //   return mealData.amount;
   // });
 
-  const totalMealAmount = totalMealData.reduce((total, mealData) => {
-    return total + mealData.amount;
+  const totalMealAmount = totalMealData.reduce((totalAmount, mealData) => {
+    return totalAmount + mealData.amount;
   }, 0);
 
   console.log(totalMealData);
