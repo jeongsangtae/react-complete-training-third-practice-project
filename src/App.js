@@ -20,7 +20,20 @@ function App() {
   const totalMealAmountHandler = (mealData) => {
     // console.log(mealData);
     setTotalMealData((prevMealData) => {
-      return [...prevMealData, mealData];
+      const newMealData = prevMealData.map((data) => {
+        if (data.id === mealData.id) {
+          return {
+            ...data,
+            price: data.price + mealData.price,
+            amount: data.amount + mealData.amount,
+          };
+        }
+        return data;
+      });
+      if (!newMealData.some((data) => data.id === mealData.id)) {
+        newMealData.push(mealData);
+      }
+      return newMealData;
     });
   };
 
