@@ -8,7 +8,12 @@ const Modal = (props) => {
     <div>
       <div className={classes.backdrop} onClick={props.onClose} />
       <div className={classes.modal}>
-        <Cart onClose={props.onClose} totalMealDatas={props.totalMealDatas} />
+        <Cart
+          onClose={props.onClose}
+          totalMealDatas={props.totalMealDatas}
+          mealPrice={props.mealPrice}
+          onAdd={props.onAdd}
+        />
       </div>
     </div>
   );

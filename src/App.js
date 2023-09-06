@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import dummyMeals from "./assets/dummy-meals";
 import AvailableMeals from "./components/Meal/AvailableMeals";
 import MealsSummary from "./components/Meal/MealsSummary";
 import Header from "./components/UI/Header";
@@ -37,12 +38,34 @@ function App() {
     });
   };
 
-  // const totalMealAmount = totalMealData.map((mealData) => {
-  //   return mealData.amount;
-  // });
+  const AddHandler = (mealDataId) => {
+    setTotalMealData((prevMealData) => {
+      const updateMealData = prevMealData.map((data) => {
+        if (data.id === mealDataId) {
+          const originPrice = dummyMeals.find(
+            (meal) => meal.id === mealDataId
+          ).price;
+          return {
+            ...data,
+            price: data.price + originPrice,
+            amount: data.amount + 1,
+          };
+        }
+        return data;
+      });
+
+      return updateMealData;
+    });
+  };
+
+  const RemoveHandler = () => {};
 
   const totalMealAmount = totalMealData.reduce((totalAmount, mealData) => {
     return totalAmount + mealData.amount;
+  }, 0);
+
+  const totalMealPrice = totalMealData.reduce((totalPrice, mealData) => {
+    return totalPrice + mealData.price;
   }, 0);
 
   console.log(totalMealData);
@@ -51,7 +74,12 @@ function App() {
   return (
     <div>
       {cartModal && (
-        <Modal onClose={cartCloseHandler} totalMealDatas={totalMealData} />
+        <Modal
+          onClose={cartCloseHandler}
+          totalMealDatas={totalMealData}
+          mealPrice={totalMealPrice}
+          onAdd={AddHandler}
+        />
       )}
       <Header onOpen={cartOpenHandler} mealAmount={totalMealAmount} />
       <MealsSummary />
