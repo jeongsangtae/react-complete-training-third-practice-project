@@ -17,9 +17,9 @@ const Cart = (props) => {
               name={totalMealData.name}
               price={totalMealData.price}
               amount={totalMealData.amount}
-              // onRemove={removeHandler}
               // totalMealData={totalMealData}
               onAdd={props.onAdd}
+              onRemove={props.onRemove}
             />
           );
         })}

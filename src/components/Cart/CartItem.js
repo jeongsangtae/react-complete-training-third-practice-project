@@ -7,6 +7,10 @@ const CartItem = (props) => {
     props.onAdd(props.id);
   };
 
+  const RemoveClickHandler = () => {
+    props.onRemove(props.id);
+  };
+
   return (
     <li className={classes["cart-item"]}>
       <div>
@@ -17,7 +21,7 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className={classes.actions}>
-        <button type="button" onClick={props.onRemove}>
+        <button type="button" onClick={RemoveClickHandler}>
           −
         </button>
         <button type="button" onClick={AddClickHandler}>

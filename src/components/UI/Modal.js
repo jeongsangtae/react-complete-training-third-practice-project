@@ -13,6 +13,7 @@ const Modal = (props) => {
           totalMealDatas={props.totalMealDatas}
           mealPrice={props.mealPrice}
           onAdd={props.onAdd}
+          onRemove={props.onRemove}
         />
       </div>
     </div>

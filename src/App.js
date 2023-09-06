@@ -53,12 +53,30 @@ function App() {
         }
         return data;
       });
-
       return updateMealData;
     });
   };
 
-  const RemoveHandler = () => {};
+  const RemoveHandler = (mealDataId) => {
+    setTotalMealData((prevMealData) => {
+      const RemoveMealData = prevMealData.map((data) => {
+        if (data.id === mealDataId) {
+          const originPrice = dummyMeals.find(
+            (meal) => meal.id === mealDataId
+          ).price;
+          return {
+            ...data,
+            price: data.price - originPrice,
+            amount: data.amount - 1,
+          };
+        }
+        return data;
+      });
+      const filterMealData = RemoveMealData.filter((data) => data.amount > 0);
+
+      return filterMealData;
+    });
+  };
 
   const totalMealAmount = totalMealData.reduce((totalAmount, mealData) => {
     return totalAmount + mealData.amount;
@@ -79,6 +97,7 @@ function App() {
           totalMealDatas={totalMealData}
           mealPrice={totalMealPrice}
           onAdd={AddHandler}
+          onRemove={RemoveHandler}
         />
       )}
       <Header onOpen={cartOpenHandler} mealAmount={totalMealAmount} />
