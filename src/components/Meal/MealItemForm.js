@@ -4,7 +4,7 @@ import Input from "../UI/Input";
 import classes from "./MealItemForm.module.css";
 
 const MealItemForm = (props) => {
-  const [amount, setAmount] = useState("");
+  const [amount, setAmount] = useState(0);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -13,12 +13,18 @@ const MealItemForm = (props) => {
   };
 
   const amountChangeHandler = (event) => {
-    setAmount(event.target.value);
+    const amountValue = event.target.value;
+
+    if (amountValue < 0) {
+      setAmount(0);
+    } else {
+      setAmount(amountValue);
+    }
   };
 
   return (
     <form className={classes.form} onSubmit={submitHandler}>
-      <Input onAmountChange={amountChangeHandler} />
+      <Input value={amount} onAmountChange={amountChangeHandler} />
       <button type="submit">+Add</button>
     </form>
   );

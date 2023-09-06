@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import classes from "./Input.module.css";
 
@@ -6,7 +6,11 @@ const Input = (props) => {
   return (
     <div className={classes.input}>
       <label>Amount</label>
-      <input type="number" onChange={props.onAmountChange} />
+      <input
+        value={props.value}
+        type="number"
+        onChange={props.onAmountChange}
+      />
     </div>
   );
 };
